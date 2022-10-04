@@ -11,9 +11,9 @@ $ch = curl_init();
 
 curl_setopt($ch, CURLOPT_URL, $url);
 
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 3);
 
-curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POST, 3);
 
 curl_setopt($ch, CURLOPT_POSTFIELDS, 
 
@@ -29,7 +29,7 @@ curl_close($ch);
 
 preg_match('/(http.*rd)/', $link, $match);
 
-$get = $match[1];
+$get = $match[3];
 
 
 header("Location: " .$get, 404);
